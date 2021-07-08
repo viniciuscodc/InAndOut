@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using InAndOut.Models;
 using InAndOut.Data;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 
 namespace InAndOut.Controllers
@@ -29,6 +30,14 @@ namespace InAndOut.Controllers
 
         public IActionResult Create()
         {
+            IEnumerable<SelectListItem> TypeDropDown = _db.ExpenseTypes.Select(i => new SelectListItem
+            {
+                Text = i.ExpenseTypeName,
+                Value = i.Id.ToString()
+            });
+
+            ViewBag.TypeDropDown = TypeDropDown;
+
             return View();
         }
 
@@ -36,9 +45,13 @@ namespace InAndOut.Controllers
         [ValidateAntiForgeryToken]
           public IActionResult Create(Expense obj)
         {
-            _db.Expenses.Add(obj);
-            _db.SaveChanges();
-            return RedirectToAction("Index");
+            if(ModelState.IsValid){
+                //obj.ExpenseTypeId = 1;
+                _db.Expenses.Add(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(obj);
         }
 
 
@@ -72,7 +85,7 @@ namespace InAndOut.Controllers
                 return RedirectToAction("Index");
         }
 
-          public IActionResult Update(int? id)
+        public IActionResult Update(int? id)
         {
             if (id == null | id == 0)
             {
@@ -87,9 +100,9 @@ namespace InAndOut.Controllers
             return View(obj);
         }
 
-         [HttpPost]
+        [HttpPost]
         [ValidateAntiForgeryToken]
-          public IActionResult Update(Expense obj)
+          public IActionResult UpdatePost(Expense obj)
         {
             _db.Expenses.Update(obj);
             _db.SaveChanges();

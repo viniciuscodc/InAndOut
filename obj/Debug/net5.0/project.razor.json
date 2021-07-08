@@ -15624,6 +15624,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/vinicius/Documents/Projects/InAndOut/Views/ExpenseType/Index.cshtml",
+      "TargetPath": "Views\\ExpenseType\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/vinicius/Documents/Projects/InAndOut/Views/Expense/Index.cshtml",
       "TargetPath": "Views\\Expense\\Index.cshtml",
       "FileKind": "mvc"
@@ -15651,6 +15656,16 @@
     {
       "FilePath": "/home/vinicius/Documents/Projects/InAndOut/Views/Item/Index.cshtml",
       "TargetPath": "Views\\Item\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/vinicius/Documents/Projects/InAndOut/Views/ExpenseType/Update.cshtml",
+      "TargetPath": "Views\\ExpenseType\\Update.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/vinicius/Documents/Projects/InAndOut/Views/ExpenseType/Delete.cshtml",
+      "TargetPath": "Views\\ExpenseType\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15686,6 +15701,11 @@
     {
       "FilePath": "/home/vinicius/Documents/Projects/InAndOut/Views/Expense/Update.cshtml",
       "TargetPath": "Views\\Expense\\Update.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/vinicius/Documents/Projects/InAndOut/Views/ExpenseType/Create.cshtml",
+      "TargetPath": "Views\\ExpenseType\\Create.cshtml",
       "FileKind": "mvc"
     }
   ],
