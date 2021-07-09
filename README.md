@@ -11,13 +11,28 @@ This is a mvc core web application made using .net 5.
 The entity framework core was used to manage the database. To adjust the database the connection string in InAndOut.csproj must be modified for the database used. Entity framework can be installed to generate tables automatically:
 
 Visual studio:
-```Add-Migration "name"```
-```Update-database ```
 
-ClI:
-```dotnet tool install --global dotnet ef```
-```dotnet ef migrations add "name"```
-```dotnet ef database update```
+```
+Add-Migration "name"
+```
+
+```
+Update-database
+```
+
+Cli:
+
+```
+dotnet tool install --global dotnet ef
+```
+
+```
+dotnet ef migrations add "name"
+```
+
+```
+dotnet ef database update
+```
 
 
 # How to run
