@@ -35,7 +35,9 @@ dotnet ef database update
 ```
 
 
-# How to run
+# Running
 To run the application a .net runtime must be installed, it's available for all platforms. It can be runned using visual studio or via CLI in the extracted folder:
 
-```dotnet run```
+```
+dotnet run
+```
