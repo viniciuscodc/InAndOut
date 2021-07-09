@@ -6,7 +6,6 @@ namespace InAndOut.Models.ViewModels
     public class ExpenseVm
     {
         public Expense Expense { get; set; }
-
         public IEnumerable<SelectListItem> TypeDropDown { get; set;}
     }
 }

@@ -62,10 +62,9 @@ namespace InAndOut.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-          public IActionResult Create(ExpenseVm obj)
+        public IActionResult Create(ExpenseVm obj)
         {
             if(ModelState.IsValid){
-                //obj.ExpenseTypeId = 1;
                 _db.Expenses.Add(obj.Expense);
                 _db.SaveChanges();
                 return RedirectToAction("Index");
@@ -76,16 +75,18 @@ namespace InAndOut.Controllers
 
         public IActionResult Delete(int? id)
         {
-            if (id == null | id == 0)
+            if (id == null || id == 0)
             {
                 return NotFound();
             }
 
             var obj = _db.Expenses.Find(id);
+            
             if (obj == null)
             {
                 return NotFound();
             }
+
             return View(obj);
         }
 
@@ -99,14 +100,14 @@ namespace InAndOut.Controllers
                 return NotFound();
             }
     
-                _db.Expenses.Remove(obj);
-                _db.SaveChanges();
-                return RedirectToAction("Index");
+            _db.Expenses.Remove(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
         }
 
         public IActionResult Update(int? id)
         {
-            if (id == null | id == 0)
+            if (id == null || id == 0)
             {
                 return NotFound();
             }
@@ -122,16 +123,18 @@ namespace InAndOut.Controllers
             };
 
             expenseVm.Expense = _db.Expenses.Find(id);
+
             if (expenseVm.Expense == null)
             { 
                 return NotFound();
             }
+
             return View(expenseVm);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-          public IActionResult UpdatePost(ExpenseVm obj)
+          public IActionResult Update(ExpenseVm obj)
         {
             if(ModelState.IsValid){
                 _db.Expenses.Update(obj.Expense);

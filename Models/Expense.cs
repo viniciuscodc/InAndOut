@@ -21,6 +21,7 @@ namespace InAndOut.Models
         public int ExpenseTypeId { get; set;}
         
         [ForeignKey ("ExpenseTypeId")]
+        
         public virtual ExpenseType ExpenseType { get; set;}
 
     }
