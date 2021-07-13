@@ -36,7 +36,7 @@ dotnet ef database update
 
 
 # Running
-To run the application a .net runtime must be installed, it's available for all platforms. It can be runned using visual studio or via CLI in the extracted folder:
+To run the application a .net runtime must be installed, it's available for all platforms. It can be run using visual studio or via CLI in the extracted folder:
 
 ```
 dotnet run
