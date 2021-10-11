@@ -7,6 +7,14 @@ This is a mvc core web application made using .net 5.
 
 <img src="preview.gif" alt="drawing"/>
 
+# Docker
+```
+docker-compose build
+```
+```
+docker-compose up
+```
+
 # Database
 The entity framework core was used to manage the database. To adjust the database the connection string in InAndOut.csproj must be modified for the database used. Entity framework can be installed to generate tables automatically:
 
