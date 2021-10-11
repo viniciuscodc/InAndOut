@@ -15,7 +15,7 @@ docker-compose build
 docker-compose up
 ```
 
-# Database
+# Running without docker
 The entity framework core was used to manage the database. To adjust the database the connection string in InAndOut.csproj must be modified for the database used. Entity framework can be installed to generate tables automatically:
 
 Visual studio:
@@ -42,9 +42,7 @@ dotnet ef migrations add "name"
 dotnet ef database update
 ```
 
-
-# Running
-To run the application a .net runtime must be installed, it's available for all platforms. It can be run using visual studio or via CLI in the extracted folder:
+To run the application a .net runtime must be installed, it's available for all platforms. It can be run using visual studio or via CLI in the root folder:
 
 ```
 dotnet run
