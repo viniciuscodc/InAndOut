@@ -8,6 +8,7 @@ This is a mvc core web application made using .net 5.
 <img src="preview.gif" alt="drawing"/>
 
 # Docker
+The url to launch application is https://localhost:5001
 ```
 docker-compose build
 ```
