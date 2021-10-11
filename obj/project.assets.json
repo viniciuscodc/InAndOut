@@ -6376,24 +6376,26 @@
     ]
   },
   "packageFolders": {
-    "/home/vinicius/.nuget/packages/": {}
+    "C:\\Users\\vinicius\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/vinicius/Documents/Projects/InAndOut/InAndOut.csproj",
+      "projectUniqueName": "C:\\Users\\vinicius\\Desktop\\dotnet\\InAndOut\\InAndOut.csproj",
       "projectName": "InAndOut",
-      "projectPath": "/home/vinicius/Documents/Projects/InAndOut/InAndOut.csproj",
-      "packagesPath": "/home/vinicius/.nuget/packages/",
-      "outputPath": "/home/vinicius/Documents/Projects/InAndOut/obj/",
+      "projectPath": "C:\\Users\\vinicius\\Desktop\\dotnet\\InAndOut\\InAndOut.csproj",
+      "packagesPath": "C:\\Users\\vinicius\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\vinicius\\Desktop\\dotnet\\InAndOut\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/vinicius/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\vinicius\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6447,7 +6449,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.301/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

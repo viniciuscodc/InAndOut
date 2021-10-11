@@ -1,0 +1,23 @@
+version: '3'
+services:
+    aspnet:
+        build: .
+        ports:
+            - "5000:80"
+        depends_on:
+            - mssql
+    mssql:
+        image: "mcr.microsoft.com/mssql/server"
+        volumes:
+            - /var/opt/mssql
+            # we copy our scripts onto the container
+            - ./:/usr/src/app 
+            # bash will be executed from that path, our scripts folder
+        working_dir: /usr/src/app 
+        command: sh -c ' chmod +x ./entrypoint.sh; ./entrypoint.sh & /opt/mssql/bin/sqlservr;'
+        environment:
+            SA_PASSWORD: "123456Hh"
+            ACCEPT_EULA: "Y"
+        # run the entrypoint.sh that will import the data AND sqlserver
+        ports:
+            - "1433:1433"
